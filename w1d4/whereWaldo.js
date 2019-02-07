@@ -2,11 +2,11 @@
 //have a call back function return the index value of Waldo with msg
 
 function findWaldo(arr, found) {
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i] === "Waldo") {
-        found(i);   
+    arr.forEach(function (element) {
+      if (element === "Waldo") {
+        found(arr.indexOf(element));   
       }
-    }
+    })
   }
   
   function actionWhenFound(arr) {
